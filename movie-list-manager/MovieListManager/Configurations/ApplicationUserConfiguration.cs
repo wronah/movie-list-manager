@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using MovieListManager.Areas.Identity.Data;
 
-namespace MovieListManager.Areas.Identity.Configurations
+namespace MovieListManager.Configurations
 {
     public class ApplicationUserConfiguration : IEntityTypeConfiguration<ApplicationUser>
     {

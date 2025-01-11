@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using MovieListManager.Models;
 
-namespace MovieListManager.Areas.Identity.Configurations
+namespace MovieListManager.Configurations
 {
     public class MovieConfiguration : IEntityTypeConfiguration<Movie>
     {
