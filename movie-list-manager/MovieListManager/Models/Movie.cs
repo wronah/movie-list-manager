@@ -14,5 +14,7 @@ namespace MovieListManager.Models
         public int Rating { get; set; }
         public DateOnly WatchedDate { get; set; }
         public string Notes { get; set; } = string.Empty;
+
+        public IList<MovieGenre>? MovieGenres { get; set; }
     }
 }

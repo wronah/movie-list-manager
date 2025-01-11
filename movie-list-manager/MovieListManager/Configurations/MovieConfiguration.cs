@@ -9,6 +9,10 @@ namespace MovieListManager.Configurations
         public void Configure(EntityTypeBuilder<Movie> builder)
         {
             builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Title).HasMaxLength(128);
+            builder.Property(x => x.Director).HasMaxLength(128);
+            builder.Property(x => x.Notes).HasMaxLength(255);
         }
     }
 }
