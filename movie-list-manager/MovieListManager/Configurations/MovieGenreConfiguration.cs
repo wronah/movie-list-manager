@@ -8,12 +8,12 @@ namespace MovieListManager.Configurations
     {
         public void Configure(EntityTypeBuilder<MovieGenre> builder)
         {
-            builder.HasKey(x => new { x.MoveId, x.GenreId });
+            builder.HasKey(x => new { x.MovieId, x.GenreId });
 
             builder
                 .HasOne(x => x.Movie)
                 .WithMany(x => x.MovieGenres)
-                .HasForeignKey(x => x.MoveId);
+                .HasForeignKey(x => x.MovieId);
 
             builder
                 .HasOne(x => x.Genre)

@@ -16,5 +16,6 @@ namespace MovieListManager.Models
         public string Notes { get; set; } = string.Empty;
 
         public IList<MovieGenre>? MovieGenres { get; set; }
+        public IList<MovieTag>? MovieTags { get; set; }
     }
 }
