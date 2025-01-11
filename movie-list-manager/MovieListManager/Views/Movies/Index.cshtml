@@ -1,0 +1,64 @@
+﻿@model List<Movie>
+
+<h1>Index</h1>
+
+<p>
+    @* <a asp-page="Create">Create New</a> *@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model[0].Rating)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                @* <td>
+                    @if ((await AuthorizationService.AuthorizeAsync(
+                   User, item,
+                   MovieOperations.Update)).Succeeded)
+                    {
+                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a>
+                        <text> | </text>
+                    }
+
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a>
+
+                    @if ((await AuthorizationService.AuthorizeAsync(
+                   User, item,
+                   MovieOperations.Delete)).Succeeded)
+                    {
+                        <text> | </text>
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    }
+                </td> *@
+            </tr>
+        }
+    </tbody>
+</table>

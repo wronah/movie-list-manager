@@ -1,3 +1,7 @@
 ﻿@using MovieListManager
 @using MovieListManager.Models
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using MovieListManager.Authorization;
+@using Microsoft.AspNetCore.Authorization
+@using MovieListManager.Models
+@inject IAuthorizationService AuthorizationService

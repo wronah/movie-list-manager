@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MovieListManager.Areas.Identity.Data;
+using MovieListManager.Models;
 
 namespace MovieListManager.Areas.Identity.Data;
 
@@ -11,6 +11,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         : base(options)
     {
     }
+    public DbSet<Movie> Movies { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
