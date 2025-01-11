@@ -36,16 +36,12 @@ namespace MovieListManager.Areas.Identity.Data
                     new Movie
                     {
                         Title = "Little Buddha",
-                        Description = "A group of Tibetan monks sets off on a journey to find the next reincarnation of their master Lama Dorje.",
-                        Author = "Bernardo Bertolucci",
                         Rating = 5,
                         OwnerId = adminId
                     },
                     new Movie
                     {
                         Title = "The Matrix",
-                        Description = "Computer hacker Neo learns from mysterious rebels that the world he lives in is only an image transmitted to his brain by robots.",
-                        Author = "Lilly Wachowski",
                         Rating = 10,
                         OwnerId = userId
                     },

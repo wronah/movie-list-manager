@@ -20,6 +20,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+
+        builder.Entity<MovieGenre>().HasKey(x => new { x.MovieId, x.GenreId});
+        builder.Entity<MovieTag>().HasKey(x => new { x.MovieId, x.TagId});
         // Customize the ASP.NET Identity model and override the defaults if needed.
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
